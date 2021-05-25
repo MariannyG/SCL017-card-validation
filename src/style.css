@@ -1,0 +1,95 @@
+*{
+  margin:0;
+  padding:0;
+
+}
+Body{
+  zoom: 25%;
+}
+#page1{
+  background-image: url("img/page1.png");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+#page2{
+  background-image: url("img/page2.png");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+#page3{
+  background-image: url("img/page3.png");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+#page4{
+  background-image: url("img/page4.png");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+#page5{
+  background-image: url("img/page5.png");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+/*Formulario Page1*/
+::placeholder{
+  color: #B8B8B8;
+}
+.form_container {
+   text-align: center;
+}
+#mail_user, #pass_user, #name_user, #cardValid {
+    font-size: 55px;
+    padding: 20px 14px;
+    border:0;
+    border-radius: 20px;
+    margin-bottom: 90px;
+    margin-left: 80vh;
+}
+#name_user{
+    margin-top: 310vh;
+}
+.btn1{
+    margin-left: 80vh;
+}
+/*Btn Write Page2*/
+.p2{
+    font-size: 100px;
+  }
+.btn2{
+    margin-top: 310vh;
+}  
+
+
+
+
+
+
+  #cardValid {
+      width: 850px;
+      margin-top: 1100px;
+  }
+
+  /*Boton*/
+  .btn1, .btn2, .btn3, .btn4 {
+    margin-top: 60px;
+    margin-bottom: 550px;
+    background-color: #53C1FF;
+    font-size: 55px;
+    padding:10px 14px;
+    cursor:pointer;
+    color: #132E34;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 500px;
+  }
+  /*Boton*/
+  .btn2, .btn3, .btn4, .btn5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ .btn3 {
+    margin-top: 600px;
+}

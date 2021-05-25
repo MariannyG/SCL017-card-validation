@@ -2,13 +2,64 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Tarjeta de crédito válida</title>
+    <title>Billetera Electrónica</title>
     <link rel="stylesheet" href="style.css" />
+    
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    <script src="index.js" type="module"></script>
+   
+    <script src="index.js"></script>
+    <script src="validator.js"></script>
+
+       <div id="page1" class="form_container" style="display:block">
+
+               
+          <input type="text" id="name_user"  placeholder="✎   Nombre">
+          <br />
+          <input type="email" id="mail_user"  placeholder="✉   Email">
+          <br />
+          <input type="text" id="pass_user"  placeholder="       Contraseña">
+          <br />
+
+          <button type="button" class="btn1" onclick="goToPage2()">Enviar</button>
+
+        </div>
+
+
+       <div id= "page2" class="form_container" style="display:none">
+
+        <p id="p2" class="p2"></p>
+  
+        <button type="button" class="btn2" onclick="goToPage3()">Agregar Tarjeta</button>
+
+       </div>
+
+
+       <div id="page3" style="display:none">
+   
+            <input type="text" id="cardValid" minlength="14" maxlength="16" onkeypress="return valideKey(evt);" placeholder=" 💳   XXXX XXXX XXXX XXXX"  required> 
+            <br />
+            
+            <button type="button" class="btn3" onclick="luhn()">Validar</button>
+
+            <p id=p3></p>
+  
+      </div>
+
+
+      <div id="page4" style="display:none">
+
+             <button type="button" class="btn4" onclick="goToPage5()">Continuar</button>
+
+      </div>
+
+      <div id="page5" style="display:none">
+
+        <p id=typeCard></p>
+        <p id=finalValue></p>
+
+       </div>
+
+
   </body>
 </html>
