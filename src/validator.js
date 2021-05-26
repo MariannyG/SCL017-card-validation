@@ -1,6 +1,5 @@
 // const validator = {};
 // export default validator;
-
 // Función operacional del algoritmo de Luhn
 function isValid(creditCardNumber) {
   var leng = creditCardNumber.length

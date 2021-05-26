@@ -1,6 +1,6 @@
 // only numbers
-function valideKey(event){
-	var code = (evt.which) ? evt.which : evt.keyCode;
+function valideKey(evt){
+	var code = (evt.which) ? evt.which : evt.keyCode; //validar que tecla el usuario ha presionado
     
     if(code==8) { // backspace.
       return true;
@@ -16,8 +16,8 @@ function valideKey(event){
 function goToPage2() {
   document.getElementById("page1").style.display = "none";
   document.getElementById("page2").style.display = "block";
-  document.getElementById("p2").innerText = "Bienvenid@ " + document.getElementById("name_user").value;
-}
+  document.getElementById("p2").innerText = document.getElementById("name_user").value;
+}                                         
 
 function goToPage3() {
   document.getElementById("page2").style.display = "none";
@@ -28,7 +28,6 @@ function goToPage4() {
   document.getElementById("page3").style.display = "none";
   document.getElementById("page4").style.display = "block";
   document.getElementById("msgValid").innerText = "Tarjeta añadida con éxito";
-
 }
 
 function goToPage5() {
@@ -40,10 +39,10 @@ function goToPage5() {
 
 //Lógica de pantallas
 function luhn() {
-  /////////////////////////////redundancia con intencionalidad
-  if (isValid(document.getElementById("cardValid").value) == true) {
+ 
+  if (isValid(document.getElementById("cardValid").value)) {
     document.getElementById("p3").innerText = "Tarjeta válida.";
-    setTimeout(goToPage4, 2000);
+    setTimeout(goToPage4, 1000);
   } else {
     document.getElementById("p3").innerText = "Tarjeta no válida";
   }
