@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Billetera Electrónica</title>
+    <link rel="stylesheet" href="style.css" />
+    
+  </head>
+  <body>
+   
+    <script type="module" src="index.js"></script>
+  
+
+    <div id="page1">
+                   
+          <input type="text" id="name_user"  placeholder="✎   Nombre" >
+          <br />
+          <input type="email" id="mail_user"  placeholder="✉   Email">
+          <br />
+          <input type="text" id="pass_user" placeholder="@    Contraseña" />
+          <br />                   
+
+          <button type="button" class="btn1" id="btn1">Enviar</button>
+
+    </div>
+   
+       <div id= "page2" class="form_container" style="display:none">
+
+        <div id="p2"></div>
+  
+        <button type="button" class="btn2" id="btn2">Agregar Tarjeta</button>
+
+       </div>
+
+
+       <div id="page3" style="display: none">
+        <form id="form" action="#">
+          <input
+            type="text"
+            id="cardValid"
+            pattern="[0-9]{14,16}"
+            onkeypress="return index.valideKey(event);"
+            title="14 a 16 números (no puede estar vacío)"
+            required
+          />
+          <br />
+          <div id="p3" style="visibility: hidden">
+            --Tarjéta inválida, intenta nuevamente--
+          </div>
+          <br />
+          <img src="img/verify.gif" id="gif" style="visibility: hidden" />
+          <br />
+          <button type="submit" class="btn3" id="btn3">Validar</button>
+        </form>
+      </div>
+
+
+      <div id="page4" style="display:none">
+
+             <button type="button" class="btn4" id="btn4">Continuar</button>
+
+      </div>
+
+    <div id="page5" style="display:none">
+
+        <p id="typeCard"></p>
+        <p id="finalValue"></p>
+
+    </div>
+
+
+  </body>
+</html>

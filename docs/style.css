@@ -1,0 +1,106 @@
+/*Fondo*/
+body {
+  background-image: url(img/back1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  zoom: 25%;
+}
+/*Pantalla de Tlf*/
+#page1 {
+  background-image: url("img/screen1.png");
+}
+#page2 {
+  background-image: url("img/screen2.png");
+}
+#page3 {
+  background-image: url("img/screen3.png");
+}
+#page4 {
+  background-image: url("img/screen4.png");
+}
+#page5 {
+  background-image: url("img/screen5.png");
+}
+
+#page1, #page2, #page3, #page4, #page5 {
+  background-repeat: no-repeat;
+  background-position-x: center;
+  text-align: center;
+  margin-top: 2%;
+  height: 2400px;
+}
+
+#mail_user, #pass_user, #name_user, #cardValid {
+  font-size: 55px;
+  padding: 20px 14px;
+  border: 0;
+  border-radius: 20px;
+  margin-bottom: 90px;
+}
+#name_user {
+  margin-top: 1000px;
+}
+#cardValid {
+  width: 780px;
+  margin-top: 825px;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+#cardValid:invalid {
+  border: 5px solid red;
+}
+#cardValid:valid {
+  border: 5px solid #53c1ff;
+}
+.btn1, .btn2, .btn3,.btn4 {
+  margin-bottom: 550px;
+  background-color: #53c1ff;
+  font-size: 55px;
+  padding: 10px 14px;
+  cursor: pointer;
+  color: #132e34;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 500px;
+}
+.btn1 {
+  margin-top: 60px;
+}
+.btn2 {
+  margin-top: 750px;
+}
+.btn3 {
+  margin-top: 10px;
+}
+.btn4 {
+  margin-top: 1700px;
+}
+#p2 {
+  font-size: 100px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
+  padding-top: 900px;
+}
+#p3 {
+  font-size: 50px;
+  color: red;
+  margin-top: 1px;
+}
+#gif {
+  max-width: 360px;
+  margin-top: 300px;
+}
+#typeCard {
+  margin-left: 220px;
+  font-size: 40px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  padding-top: 620px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+#finalValue {
+  font-size: 50px;
+}
