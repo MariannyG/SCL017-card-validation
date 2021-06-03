@@ -1,54 +1,60 @@
-// only numbers
-function valideKey(evt){
-	var code = (evt.which) ? evt.which : evt.keyCode; //validar que tecla el usuario ha presionado
-    
-    if(code==8) { // backspace.
+const index = {
+  // only numbers
+  valideKey(evt) {
+    var code = (evt.which) ? evt.which : evt.keyCode; //valide key
+
+    if (code == 8) { // backspace.
       return true;
-    } else if(code>=48 && code<=57) { // is a number.
+    } else if (code >= 48 && code <= 57) { // is a number.
       return true;
-    } else{ // other keys.
+    } else { // other keys.
       return false;
     }
-}
+  },
 
-//Manipulación de pantallas para mostrar y ocultar
+  //Screen manipulation 
+  goToPage2() {
+    document.getElementById("page1").style.display = "none";
+    document.getElementById("page2").style.display = "block";
+    document.getElementById("p2").innerText = document.getElementById("name_user").value;
+  },
 
-function goToPage2() {
-  document.getElementById("page1").style.display = "none";
-  document.getElementById("page2").style.display = "block";
-  document.getElementById("p2").innerText = document.getElementById("name_user").value;
-}                                         
+  goToPage3() {
+    document.getElementById("page2").style.display = "none";
+    document.getElementById("page3").style.display = "block";
+  },
 
-function goToPage3() {
-  document.getElementById("page2").style.display = "none";
-  document.getElementById("page3").style.display = "block";
-}
+  goToPage4() {
+    document.getElementById("page3").style.display = "none";
+    document.getElementById("page4").style.display = "block";
+  },
 
-function goToPage4() {
-  document.getElementById("page3").style.display = "none";
-  document.getElementById("page4").style.display = "block";
-  document.getElementById("msgValid").innerText = "Tarjeta añadida con éxito";
-}
+  goToPage5() {
+    document.getElementById("page4").style.display = "none";
+    document.getElementById("page5").style.display = "block";
+    document.getElementById("typeCard").innerText = validator.type(document.getElementById("cardValid").value);
+    document.getElementById("finalValue").innerText = validator.maskify(document.getElementById("cardValid").value);
+  },
 
-function goToPage5() {
-  document.getElementById("page4").style.display = "none";
-  document.getElementById("page5").style.display = "block";
-  document.getElementById("typeCard").innerText = type(document.getElementById("cardValid").value);
-  document.getElementById("finalValue").innerText = maskify(document.getElementById("cardValid").value);
-}
+  //validation screen logic
+  luhn() {
+    if (validator.isValid(document.getElementById("cardValid").value)) {
+      document.getElementById("p3").style.visibility = "hidden";
+      document.getElementById("gif").style.visibility = "visible";
+      setTimeout(index.goToPage4, 1000);
+    } else {
+      document.getElementById("p3").style.visibility = "visible";
+      }
+      return false;
 
-//Lógica de pantallas
-function luhn() {
- 
-  if (isValid(document.getElementById("cardValid").value)) {
-    document.getElementById("p3").innerText = "Tarjeta válida.";
-    setTimeout(goToPage4, 1000);
-  } else {
-    document.getElementById("p3").innerText = "Tarjeta no válida";
-  }
-}
+    }
+};
 
+document.getElementById("btn1").addEventListener("click", index.goToPage2);
+document.getElementById("btn2").addEventListener("click", index.goToPage3);
+document.getElementById("form").addEventListener("submit", index.luhn);
+document.getElementById("btn4").addEventListener("click", index.goToPage5);
 
-/*import validator from './validator.js';
+import validator from './validator.js';
 
-console.log(validator);*/
+//console.log(validator);
