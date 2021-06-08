@@ -1,7 +1,9 @@
+import validator from './validator.js';
+
 const index = {
   // only numbers
   valideKey(evt) {
-    var code = (evt.which) ? evt.which : evt.keyCode; //valide key
+    let code = (evt.which) ? evt.which : evt.keyCode; //valide key
 
     if (code == 8) { // backspace.
       return true;
@@ -54,7 +56,3 @@ document.getElementById("btn1").addEventListener("click", index.goToPage2);
 document.getElementById("btn2").addEventListener("click", index.goToPage3);
 document.getElementById("form").addEventListener("submit", index.luhn);
 document.getElementById("btn4").addEventListener("click", index.goToPage5);
-
-import validator from './validator.js';
-
-//console.log(validator);
