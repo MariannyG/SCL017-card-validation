@@ -50,7 +50,7 @@ _A continuación se muestra el ( [Prototipo Final](https://www.figma.com/file/9v
   
   ![Digital Wallet](src/img/digitalwallet.png)
   
-  ( [Prototipo Final](https://mariannyg.github.io/SCL017-card-validation/?#) )
+   [Prototipo Final](https://mariannyg.github.io/SCL017-card-validation/?#) 
 
 ## 3. Tecnologías implementadas 🛠️
 
